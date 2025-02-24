@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     public float jumpImpule = 10f;
-    public float glideSpeed = 1f; 
-    private bool isGliding = false;
+
+
 
     public float CurrentMoveSpeed { get 
         {
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         } private set 
         { 
             _isMoving = value;
-            animator.SetBool(AnimationStrings.isMoving, value);
+            //animator.SetBool(AnimationStrings.isMoving, value);
         }
     }
 
@@ -88,19 +88,13 @@ public class PlayerController : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
     }
 
-
-
+    
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+        Debug.Log("in the fixed move" + moveInput.x);
+        rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
-        if (isGliding && !touchingDirections.IsGrounded)
-        {
-            // Reduce vertical velocity to create a gliding effect
-            rb.velocity = new Vector2(rb.velocity.x, -glideSpeed);
-        }
-
-        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+        //animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
         
     }
 
@@ -108,7 +102,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-       moveInput = context.ReadValue<Vector2>();
+        Debug.Log("in the onmove" + IsAlive);
+        moveInput = context.ReadValue<Vector2>();
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
@@ -136,22 +131,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    
+public void OnJump(InputAction.CallbackContext context)
+{
+    // Check if the character is alive 
+    
+    if (context.started && touchingDirections.IsGrounded && CanMove)
     {
-        //check if alive as well
-        
-        if (context.started && touchingDirections.IsGrounded && CanMove)
-        {
-            animator.SetTrigger(AnimationStrings.jump);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpule);
-        }
-
-        if (context.canceled && rb.velocity.y > 0f && CanMove)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
+        animator.SetTrigger(AnimationStrings.jump);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpule);
     }
+
+    if (context.canceled && rb.linearVelocity.y > 0f && CanMove)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+    }
+}
 
     public void OnRestart(InputAction.CallbackContext context)
     {

@@ -15,5 +15,5 @@ using System.Threading.Tasks;
     internal static string isOnCeiling = "isOnCeiling";
     internal static string isAlive = "isAlive";
     internal static string canMove = "canMove";
-    internal static string isGliding = "isGliding";
+    //internal static string isGliding = "isGliding";
 }
