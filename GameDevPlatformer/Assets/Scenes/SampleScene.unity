@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSize: 40
   parallaxSpeed: 0.1
-  sortOrder: 2
+  sortOrder: 3
   sprite: {fileID: 7156304800144164176, guid: 935b96c4c3cce084d987ea30ebf3daf9, type: 3}
 --- !u!1 &234588311
 GameObject:
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 2575815558344410250, guid: 6cf13414f03350b47a933c08b089871f, type: 3}
+  m_Sprite: {fileID: 1960198971559912155, guid: 54751f2f7b366a5408bb64026e466b01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -352,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 234588311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: -6.57, z: 0}
+  m_LocalPosition: {x: -3.82, y: -5.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -522,8 +522,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.375, y: 1.5625}
+  m_Offset: {x: -0.048355937, y: -0.18536484}
+  m_Size: {x: 2.471071, y: 3.1260135}
   m_Direction: 0
 --- !u!114 &234588322
 MonoBehaviour:
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSize: 40
   parallaxSpeed: 0.9
-  sortOrder: 0
+  sortOrder: 1
   sprite: {fileID: -8092451307524461710, guid: b58c643fcef08274d85ad46b5244748e, type: 3}
 --- !u!4 &491042101
 Transform:
@@ -45945,7 +45945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSize: 40
   parallaxSpeed: 0.5
-  sortOrder: 1
+  sortOrder: 2
   sprite: {fileID: 7113298255519769854, guid: bb72d198bb47adc4e9036031dba9f1c8, type: 3}
 --- !u!4 &1833473348
 Transform:

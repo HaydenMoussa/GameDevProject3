@@ -21,7 +21,7 @@ public class TouchingDirections : MonoBehaviour
 
     public bool IsGrounded { get { return _isGrounded; } private set {
             _isGrounded = value;
-            //animator.SetBool(AnimationStrings.IsGrounded, value);
+            animator.SetBool(AnimationStrings.IsGrounded, value);
         } }
 
 
@@ -35,7 +35,7 @@ public class TouchingDirections : MonoBehaviour
         private set
         {
             _isOnWall = value;
-            //animator.SetBool(AnimationStrings.isOnWall, value);
+            animator.SetBool(AnimationStrings.isOnWall, value);
         }
     }
 
@@ -49,7 +49,7 @@ public class TouchingDirections : MonoBehaviour
         private set
         {
             _isOnCeiling = value;
-            //animator.SetBool(AnimationStrings.isOnCeiling, value);
+            animator.SetBool(AnimationStrings.isOnCeiling, value);
         }
     }
 

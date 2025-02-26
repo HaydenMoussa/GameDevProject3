@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("in the fixed move" + moveInput.x);
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
-        //animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+        animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
         
     }
 
