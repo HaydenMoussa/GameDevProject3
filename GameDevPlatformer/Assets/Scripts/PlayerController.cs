@@ -157,4 +157,11 @@ public void OnJump(InputAction.CallbackContext context)
     }
 
 
+    public void incWalkSpeed()
+    {
+        Debug.Log("MS increased");
+
+        walkSpeed += 4f;
+    }
+
 }

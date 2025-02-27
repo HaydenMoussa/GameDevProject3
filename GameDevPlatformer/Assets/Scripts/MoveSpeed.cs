@@ -3,24 +3,35 @@ using UnityEngine;
 public class MoveSpeed : MonoBehaviour
 {
 
-
+    
 
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Death block hit");
+        Debug.Log("MS Buff Hit");
+
+        
 
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player hit death block");
+            Debug.Log("Player hit MS Buff");
 
-            Respawn.respawn();
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+
+            disableBuff();
+
+            player.incWalkSpeed();
+
+
         }
     }
 
 
 
-
+    private void disableBuff()
+    {
+        Destroy(this.gameObject);
+    }
 
 
 
