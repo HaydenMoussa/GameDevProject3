@@ -5,6 +5,7 @@ public class PlayerConvo : MonoBehaviour
     [SerializeField] float talkDistance = 2;
     bool inConversation;
     private bool hasTriggered = false;
+    public GameObject ground;
     public string[] finalD = {"Wow that was fast, thank you for your work! I'm going to enjoy this!"};
 
     void Update()
@@ -22,6 +23,10 @@ public class PlayerConvo : MonoBehaviour
         }
         
         
+    }
+    void OnDialogueFinished()
+    {
+        Destroy(ground); 
     }
 
     void Interact()
@@ -61,11 +66,14 @@ public class PlayerConvo : MonoBehaviour
     {
         GameManager.OnDialogueStarted += JoinConversation;
         GameManager.OnDialogueEnded += LeaveConversation;
+        GameManager.OnDialogueEnded += OnDialogueFinished;
     }
 
     private void OnDisable()
     {
         GameManager.OnDialogueStarted -= JoinConversation;
         GameManager.OnDialogueEnded -= LeaveConversation;
+        GameManager.OnDialogueEnded -= OnDialogueFinished;
     }
+
 }
