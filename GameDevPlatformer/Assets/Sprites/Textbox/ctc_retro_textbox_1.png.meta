@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ctc_retro_textbox_1_0: 5082744487963378603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
