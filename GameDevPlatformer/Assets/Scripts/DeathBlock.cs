@@ -16,9 +16,9 @@ public class DeathBlock : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+    void OnTriggerEnter2D(Collider2D collision)
+    {    Debug.Log("Death block hit");
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Player hit death block");
             
