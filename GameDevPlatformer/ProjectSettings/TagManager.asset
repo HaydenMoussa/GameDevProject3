@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Buff
+  - MSBuff
   layers:
   - Default
   - TransparentFX

@@ -38,15 +38,17 @@ public class PlayerConvo : MonoBehaviour
         else
         {
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, talkDistance, Vector2.up, 0, LayerMask.GetMask("NPC"));
-            if (hit)
+            if (hit && !hasTriggered)
             {
 
                 if (hit.collider.gameObject.TryGetComponent(out NPC npc))
                 {
-                    
+                    Debug.Log("Interacting with " + npc.npcName);
+
                     GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName);
-                    
-                    
+
+                    hasTriggered = true;
+
                 }
             }
         }
