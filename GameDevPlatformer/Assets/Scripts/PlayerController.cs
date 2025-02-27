@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         } private set 
         { 
             _isMoving = value;
-            //animator.SetBool(AnimationStrings.isMoving, value);
+            animator.SetBool(AnimationStrings.isMoving, value);
         }
     }
 
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        Debug.Log("in the fixed move" + moveInput.x);
+        
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("in the onmove" + IsAlive);
+        
         moveInput = context.ReadValue<Vector2>();
         if (IsAlive)
         {
