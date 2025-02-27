@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617f5902d17d4e545a4b8af83675d464, type: 3}
+  m_Name: CarrotDoubleJump
+  m_EditorClassIdentifier: 
+  dialogue:
+  - You've found a carrot, pick it up to feed your hunger.
+  - It seems as though the carrot has given you powers.
+  - Try pressing space while in the air to preform a double jump.
