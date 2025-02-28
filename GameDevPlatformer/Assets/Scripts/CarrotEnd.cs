@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +18,7 @@ public class CarrotEnd : MonoBehaviour
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
             
-            SceneManager.LoadScene("Credits", LoadSceneMode.Additive);
+            SceneManager.LoadScene(2);
 
         }
     }

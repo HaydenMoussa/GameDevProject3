@@ -173,13 +173,13 @@ public void OnJump(InputAction.CallbackContext context)
     {
         Debug.Log("MS increased");
 
-        walkSpeed += 4f;
+        walkSpeed += 2f;
     }
 
     public void incJump()
     {
         Debug.Log("Jump increased");
-        jumpImpule += 5f;
+        jumpImpule += 1f;
     }
 
     public void incJumpCount()

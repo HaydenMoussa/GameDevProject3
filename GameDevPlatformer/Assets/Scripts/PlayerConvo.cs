@@ -6,7 +6,6 @@ public class PlayerConvo : MonoBehaviour
     bool inConversation;
     private bool hasTriggered = false;
     public GameObject ground;
-    public string[] finalD = {"Wow that was fast, thank you for your work! I'm going to enjoy this!"};
 
     void Update()
     {
@@ -17,6 +16,7 @@ public class PlayerConvo : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("in collider");
         if(!hasTriggered){
             Interact();
             hasTriggered = true;
@@ -29,7 +29,7 @@ public class PlayerConvo : MonoBehaviour
         Destroy(ground); 
     }
 
-    void Interact()
+    public void Interact()
     {
         if (inConversation)
         {

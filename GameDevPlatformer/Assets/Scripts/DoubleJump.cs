@@ -3,6 +3,7 @@ using UnityEngine;
 public class DoubleJump : MonoBehaviour
 {
 
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("DJ Buff Hit");
