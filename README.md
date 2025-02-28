@@ -1,5 +1,24 @@
 # GameDevProject3
 
+Name: It's Only Natural
+
+Intent: A platformer with power-ups and obstacles.
+
+Narrative Structure: You are a bunny being guided by a game master who tells you that your sole purpose is to find food. As you search, you stumble upon a carrot but this is no ordinary carrot. It grants you the ability to double jump, unlocking a new section of the stage where you can find more food and ultimately complete the game.
+
+Mechanics: WASD movement, space to jump and double jump.
+
+Aesthetics: Forests/wilderness, pixel art.
+
+Joys and Struggles Hayden-
+
+I enjoyed creating the animations for the bunny; once they were finished and looking good, I felt very accomplished. However, the animations were also my biggest struggle. The sprites in our character sprite sheet are not all the same size, which caused a lot of trouble making the animations look fluid.
+
+Contributions Hayden-
+
+I created the repository and implemented movement along with animations to bring the character to life. I designed the tilemap and grid system, as well as a parallax background to enhance the game's depth. Additionally, I developed the dialogue scripts and structured the storyline that guides the player's progression. I also incorporated custom fonts, designed the main menu and credits screen, and programmed the majority of the game's scripts.
+
+
 text box - https://fablefiction.itch.io/chocolate-retro-textbox-01
 
 Forest pixle art- https://sanctumpixel.itch.io/forest-lite-pixel-art-tileset
