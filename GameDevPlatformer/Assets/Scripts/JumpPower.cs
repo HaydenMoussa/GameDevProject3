@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoubleJump : MonoBehaviour
+public class JumpPower : MonoBehaviour
 {
 
 
