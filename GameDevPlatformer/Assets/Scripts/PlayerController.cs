@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour
     TouchingDirections touchingDirections;
     public float jumpImpule = 10f;
 
-
-
+    private bool isGrounded;
+    private int jumpCount = 0;
+    private int maxJumpCount = 1;
     public float CurrentMoveSpeed { get 
         {
             if (CanMove)
@@ -91,11 +92,18 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+
         
+
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
-        
+
+        if (touchingDirections.IsGrounded)
+        {
+            jumpCount = 0;
+        }
+
     }
 
 
@@ -132,13 +140,17 @@ public class PlayerController : MonoBehaviour
     }
 
     
+
+
 public void OnJump(InputAction.CallbackContext context)
 {
     // Check if the character is alive 
-    
-    if (context.started && touchingDirections.IsGrounded && CanMove)
+        jumpCount++;
+
+    if (context.started && (touchingDirections.IsGrounded || jumpCount <= maxJumpCount) && CanMove)
     {
-        animator.SetTrigger(AnimationStrings.jump);
+            
+            animator.SetTrigger(AnimationStrings.jump);
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpule);
     }
 
@@ -167,8 +179,13 @@ public void OnJump(InputAction.CallbackContext context)
     public void incJump()
     {
         Debug.Log("Jump increased");
-        jumpImpule += 10f;
+        jumpImpule += 5f;
     }
 
+    public void incJumpCount()
+    {
+        Debug.Log("Jump count increased");
+        maxJumpCount += 1;
+    }
 
 }

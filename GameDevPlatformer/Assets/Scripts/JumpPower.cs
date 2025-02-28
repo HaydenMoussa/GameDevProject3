@@ -7,13 +7,13 @@ public class JumpPower : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("J Buff Hit");
+        Debug.Log("JP Buff Hit");
 
 
 
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player hit J Buff");
+            Debug.Log("Player hit JP Buff");
 
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
