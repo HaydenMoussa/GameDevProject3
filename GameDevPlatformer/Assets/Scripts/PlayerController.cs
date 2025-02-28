@@ -164,4 +164,11 @@ public void OnJump(InputAction.CallbackContext context)
         walkSpeed += 4f;
     }
 
+    public void incJump()
+    {
+        Debug.Log("Jump increased");
+        jumpImpule += 10f;
+    }
+
+
 }
