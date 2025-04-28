@@ -20,6 +20,8 @@ I created the repository and implemented movement along with animations to bring
 
 Joys and Struggles Mason-
 
+I enjoyed creating the buffs and messing with the level of their effects on the bunnies' movement. I initially struggled getting the traps to properly detect and eliminate the player with their hitboxes. 
+
 Contributions Mason-
 
 I fleshed out the map, adding some of the parkour elements as well as the traps. I implemented the traps, their hitboxes, and their collision scripts which damage/eliminate the player. I also added the buff system and 
