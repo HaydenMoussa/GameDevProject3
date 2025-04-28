@@ -18,6 +18,13 @@ Contributions Hayden-
 
 I created the repository and implemented movement along with animations to bring the character to life. I designed the tilemap and grid system, as well as a parallax background to enhance the game's depth. Additionally, I developed the dialogue scripts and structured the storyline that guides the player's progression. I also incorporated custom fonts, designed the main menu and credits screen, and programmed the majority of the game's scripts.
 
+Joys and Struggles Mason-
+
+Contributions Mason-
+
+I fleshed out the map, adding some of the parkour elements as well as the traps. I implemented the traps, their hitboxes, and their collision scripts which damage/eliminate the player. I also added the buff system and 
+it's associated scripts as well as their appearance and glow effects. I also implemented the characters double jump and helped design the dialogue appearance and scripts. 
+
 
 text box - https://fablefiction.itch.io/chocolate-retro-textbox-01
 
